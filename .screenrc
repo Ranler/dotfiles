@@ -1,0 +1,56 @@
+#
+# ~/.screenrc
+#
+
+# 和256色相关的配置，第一行让$TERM环境变量显示为xterm或xterm-color，这样执行.bashrc后才能有颜色
+term xterm-color
+#attrcolor b ".I"
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#defbce "on"
+
+# 启动时不显示欢迎屏幕
+startup_message off
+
+# 屏幕缓冲区 2048 行。
+defscrollback 2048
+
+# 在最下一行显示窗口列表和时钟
+hardstatus on
+hardstatus alwayslastline
+# hardstatus string '%{Yk}%-w%{.Yk}%n %t%{-}%+w %=%{.w} %{.Yr}%1` %{.Yb}%2`M %{kY}%C'
+# hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w %=%{..G} %H(%l) %{..Y}%c"
+hardstatus string "%{= R}[ %{=b y}%-w%{=rb Yk}%>%n %t%{-}%+w%{-b}%< %=%{R}][%{M}%Y-%m-%d %{G}%c%{R}]"
+
+# 关闭错误提示
+vbell off
+
+
+
+
+# default windows
+screen -t shell 1
+screen -t workspace 2
+screen -t su 3 sudo su -
+screen -t notes 4
+#screen -t notes 5
+#chdir
+#screen -t mutt 6 mutt
+select 1
+
+#remove some stupid / dangerous key bindings
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+#make them better
+bind 'K' kill
+bind 'I' login on
+bind 'O' login off
+bind '}' history
+
+# make the shell in every window a login shell
+# 意思是会去执行~/.bash_profile
+shell -$SHELL
