@@ -47,8 +47,8 @@
 (require 'markdown-config)
 ;; 语言插件
 (require 'c-config) ;; ecb
-;(require 'python-config)
-(require 'lua-mode)
+(require 'python-config)
+(require 'lua-config)
 
 
 
