@@ -14,17 +14,16 @@ Configuration for Emacs24, which depends on addons:
 - auto-complete
 - autopair
 - color-theme
-- ecb
+- ecb: replace it by ecb2.40 version
 - flymake-cursor
 - lua-mode
 - markdown-mode
 - popup
 - pymacs
 - python-mode
-- smart-operator
+- smart-operator: replace it by http://marmalade-repo.org/packages/smart-operator
 - tabbar
 - yasnippet
-- yasnippet-config
 
 
 awesome

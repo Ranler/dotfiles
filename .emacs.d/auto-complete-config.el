@@ -1,5 +1,5 @@
 ;; 配置auto-complete
-(add-to-list 'load-path (concat dotfiles-dir "/el-get/auto-complete/"))
+;(add-to-list 'load-path (concat dotfiles-dir "/el-get/auto-complete/"))
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories (concat dotfiles-dir "/el-get/auto-complete/dict"))
   

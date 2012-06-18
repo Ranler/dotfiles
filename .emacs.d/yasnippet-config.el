@@ -1,6 +1,6 @@
 ;; 配置YASnippet
 
-(add-to-list 'load-path (concat dotfiles-dir "/el-get/yasnippet"))
+;(add-to-list 'load-path (concat dotfiles-dir "/el-get/yasnippet"))
 (require 'yasnippet) ;;not yasnippet-bundle
 (yas/initialize)
 (yas/load-directory (concat dotfiles-dir "/el-get/yasnippet/snippets"))
