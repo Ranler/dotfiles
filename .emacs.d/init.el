@@ -40,6 +40,7 @@
 ;; 辅助插件
 (require 'ido-config)
 (require 'tabbar-config) 
+(require 'powerline-config)
 ;; 编辑插件
 ;(require 'flymake-config)   ;; 语法检查
 (require 'all-complete-config)
@@ -47,8 +48,8 @@
 (require 'markdown-config)
 ;; 语言插件
 (require 'c-config) ;; ecb
-(require 'python-config)
-(require 'lua-config)
+;(require 'python-config)
+;(require 'lua-config)
 
 
 

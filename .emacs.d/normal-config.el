@@ -39,24 +39,24 @@ scroll-conservatively 10000)
 
 
 ;; change state bar use mode-line
-(setq-default mode-line-format
-	      '("%t%e"
-		mode-line-mule-info
-		mode-line-client
-		mode-line-modified
-		mode-line-remote
-		" "
-		mode-line-buffer-identification
-		" %IB "
-		,(propertize " " 'help-echo help-echo)
-		mode-line-position
-		(vc-mode vc-mode)
-		mode-line-modes
-		(which-func-mode (" " which-func-format))
-		(working-mode-line-message (" " working-mode-line-message))
-		,(propertize "-%-" 'help-echo help-echo)
-		"%-"
-		))
+;(setq-default mode-line-format
+;	      '("%t%e"
+;		mode-line-mule-info
+;		mode-line-client
+;		mode-line-modified
+;		mode-line-remote
+;		" "
+;		mode-line-buffer-identification
+;		" %IB "
+;		,(propertize " " 'help-echo help-echo)
+;		mode-line-position
+;		(vc-mode vc-mode)
+;		mode-line-modes
+;		(which-func-mode (" " which-func-format))
+;		(working-mode-line-message (" " working-mode-line-message))
+;		,(propertize "-%-" 'help-echo help-echo)
+;		"%-"
+;		))
 
 
 ;;shell,gdb退出后，自动关闭该buffer 

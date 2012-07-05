@@ -24,6 +24,7 @@ Configuration for Emacs24, which depends on addons:
 - smart-operator: replace it by http://marmalade-repo.org/packages/smart-operator
 - tabbar
 - yasnippet
+- powerline
 
 
 awesome
