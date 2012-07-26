@@ -378,9 +378,9 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 require("statebar")
 
 left_separator = widget({ type = "textbox" })
-left_separator.text = " [ "
+left_separator.text = "["
 right_separator = widget({ type = "textbox" })
-right_separator.text = " ] "
+right_separator.text = "]"
 
 
 

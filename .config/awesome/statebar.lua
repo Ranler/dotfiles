@@ -2,9 +2,18 @@
 -- ranler's widgets
  -- awesome 3.4.11
 -------------------
+local vicious = require("vicious")
+local blingbling = require("blingbling")
 
-require("vicious")
-require("blingbling")
+local green="#7fb219"
+local cyan="#7f4de6"
+local red="#e04613"                             
+local lblue="#6c9eab"                        
+local dblue="#00ccff"
+local black="#000000"
+local lgrey="#d2d2d2"
+local dgrey="#333333"
+local white="#ffffff"
 
 -- {{{ CPU
 -- cache
@@ -14,7 +23,7 @@ vicious.cache(vicious.widgets.cpuinf)
 -- core 0 freq
 cpufreq = widget ({ type="textbox" })
 vicious.register(cpufreq, vicious.widgets.cpuinf, function(widget, args)
-  return string.format(" cpu: <span color=\"#ffa500\">%1.1fGHz</span> ", args["{cpu0 ghz}"])
+		    return string.format(" cpu: <span color=\"#ffa500\">%1.1fGHz</span>", args["{cpu0 ghz}"])
 end, 300)
 
 -- core 0 %
@@ -53,6 +62,10 @@ vicious.cache(vicious.widgets.net)
 netwidget = widget({ type = "textbox" })
 vicious.register(netwidget, vicious.widgets.net, ' net: <span color="#b0e2ff">${eth0 up_kb} kb/${eth0 down_kb} kb</span> ',2)
 -- }}}
+blingbling.popups.netstat(netwidget,
+			  {title_color = lblue, 
+			   established_color = green, 
+			   listen_color = cyan})
 
 
 -- {{{ CLOCK
@@ -64,29 +77,28 @@ vicious.register(clockwidget, vicious.widgets.date,
 
 
 
-
-
-
-
-
-
-
-
 -- CPU Widget
-cpulabel= widget({ type = "textbox" })
-cpulabel.text='CPU: '
+-- cpulabel= widget({ type = "textbox" })
+-- cpulabel.text='CPU: '
+
 mycairograph=blingbling.classical_graph.new()
 mycairograph:set_height(18)
 mycairograph:set_width(200)
 mycairograph:set_tiles_color("#00000022")
 mycairograph:set_show_text(true)
-mycairograph:set_label("Load: $percent %")
+mycairograph:set_label("CPU: $percent %")
+blingbling.popups.htop(mycairograph.widget,
+		       {title_color = white, 
+			user_color= red, 
+			root_color= lblue, 
+			terminal = "urxvt"})
 vicious.register(mycairograph, vicious.widgets.cpu,'$1',2)
 
 
- memwidget=blingbling.classical_graph.new()
- memwidget:set_height(18)
- memwidget:set_width(200)
- memwidget:set_tiles_color("#00000022")
- memwidget:set_show_text(true)
- vicious.register(memwidget, vicious.widgets.mem, '$1', 2)
+memwidget=blingbling.classical_graph.new()
+memwidget:set_height(18)
+memwidget:set_width(200)
+memwidget:set_tiles_color("#00000022")
+memwidget:set_show_text(true)
+vicious.register(memwidget, vicious.widgets.mem, '$1', 2)
+

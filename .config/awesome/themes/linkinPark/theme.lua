@@ -30,7 +30,8 @@ theme = {}
 -- theme.font          = "Comic Sans MS 8"
 -- theme.font          = "Carousel 10"
 -- theme.font          = "Chewy 9"
-theme.font          = "DejaVu Sans 9"
+theme.font          = "DejaVu Sans Mono 9"
+--theme.font          = "Monaco 8"
 
 theme.bg_normal     = "#000000" -- black 
 theme.bg_focus      = "#48A4D5" -- bright blue 
