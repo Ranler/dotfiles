@@ -1,10 +1,12 @@
-;; 配置YASnippet
+;; YASnippet
+;; use old version 0.6 in google code
+;; new old not work with auto-complete
 
-;(add-to-list 'load-path (concat dotfiles-dir "/el-get/yasnippet"))
 (require 'yasnippet) ;;not yasnippet-bundle
 (yas/initialize)
 (yas/load-directory (concat dotfiles-dir "/el-get/yasnippet/snippets"))
 
+; change face
 (defface ac-yasnippet-candidate-face
   '((t (:background "sandybrown" :foreground "black")))
   "Face for yasnippet candidate.")
@@ -17,6 +19,5 @@
     (candidate-face . ac-yasnippet-candidate-face)
     (selection-face . ac-yasnippet-selection-face))
   "Source for Yasnippet.")
-
 
 (provide 'yasnippet-config)

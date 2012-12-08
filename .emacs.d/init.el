@@ -42,14 +42,15 @@
 (require 'tabbar-config) 
 (require 'powerline-config)
 ;; 编辑插件
-;(require 'flymake-config)   ;; 语法检查
+(require 'flymake-config)
 (require 'all-complete-config)
-(require 'xetex-config)
-(require 'markdown-config)
+;(require 'xetex-config)
+;(require 'markdown-config)
 ;; 语言插件
-(require 'c-config) ;; ecb
-;(require 'python-config)
+(require 'c-config)
+(require 'python-config)
 ;(require 'lua-config)
+;(load-file (concat dotfiles-dir "/el-get/piglatin.el"))
 
 
 
