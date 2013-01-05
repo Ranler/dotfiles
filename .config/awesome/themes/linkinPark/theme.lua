@@ -124,7 +124,8 @@ theme.titlebar_maximized_button_focus_active  = "~/.config/awesome/themes/linkin
 -- theme.wallpaper_cmd = { "awsetbg ~/.config/awesome/themes/linkinPark/background/background.png" }
 -- random wallpaper 
 -- theme.wallpaper_cmd = { "feh --bg-center ~/.config/awesome/themes/linkinPark/background/Arch_Linux_Wallpaper.jpg" }
-theme.wallpaper_cmd = { "awsetbg -u feh " .. os.getenv("HOME") .. "/.config/awesome/themes/linkinPark/background/arch_linux-wallpaper-1440x900.jpg" }
+-- theme.wallpaper_cmd = { "awsetbg -u feh " .. os.getenv("HOME") .. "/.config/awesome/themes/linkinPark/background/arch_linux-wallpaper-1440x900.jpg" }
+theme.wallpaper = os.getenv("HOME") .. "/.config/awesome/themes/linkinPark/background/arch_linux-wallpaper-1440x900.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "~/.config/awesome/themes/linkinPark/layouts/fairhw.png"
