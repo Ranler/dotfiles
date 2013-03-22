@@ -72,6 +72,7 @@ bindkey "^[[B" history-search-forward
 #setopt HIST_IGNORE_SPACE     
 #}}}
 
+
 #每个目录使用独立的历史纪录{{{
 HISTDIR="$HOME/.zhistory"
     [[ ! -d "$HISTDIR" ]] && mkdir -p "$HISTDIR"
